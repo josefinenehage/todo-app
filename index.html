@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+</head>
+<style>
+span{
+    margin-left: 5%;
+}
+</style>
+<body>
+    <div id="app">
+        <ol>
+        <li v-for="(todo, index) in todoList">{{todo}}  <span v-on:click="todoList.pop(index)">🗑️</span></li>
+    </ol>
+    <input v-model="message" v-on:keyup.enter="add">
+    <p>{{message}}</p>
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+</html>
