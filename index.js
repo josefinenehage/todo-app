@@ -2,10 +2,9 @@ var app = new Vue ({
     el: "#app", 
     data: {
         todoList: [
-            "cook", "clean", "Code", "Add your own todo below"
+            "cook", "clean", "Code", "Add todo"
         ],
-        message: '', 
-        trashcan: '🗑️'
+        message: '',
     },
     methods:{
         add(){
