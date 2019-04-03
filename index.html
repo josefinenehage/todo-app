@@ -10,7 +10,9 @@
 </head>
 <style>
 h1{
-    color:white;
+    color:#ff4d00;
+    font-size: 45px;
+    font-weight: 700;
 }
 
 .trash {
@@ -21,26 +23,41 @@ body{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     width: 700px;
     margin: auto;
-    background: #3953a4;
+    background: #DB9BCB;
+    color:white;
+    font-size: 25px;
+    font-weight: 500;
 }
 
 input{
     padding: 10px 10px;
     margin-top: 10%;
+    width: 40%;
+}
+
+table{
+    table-layout: fixed;
+    width: 400px;
+}
+
+button{
+    padding: 10px 10px;
+
 }
 
 </style>
 <body>
-    <div id="app">
-        <h1>My first todo-app in js! 📝</h1>
+    
+    <h1>My first todo-app in js! 📝</h1>
 
+    <div id="app">
         <table>
                 <tr v-for="(todo, index) in todoList">
                 <td>{{todo}}</td>  
                  <td><button v-on:click="remove(index)" class="trash">🗑️</button></td>
                 </tr>
         </table>
-    <input v-model="message" v-on:keyup.enter="add" placeholder="what do you need todo">
+    <input v-model="message" v-on:keyup.enter="add" placeholder="what needs todo">
     <button type: button v-on:click="add">Add todo</button>
     </div>
 
